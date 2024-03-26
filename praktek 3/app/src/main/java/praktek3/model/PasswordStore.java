@@ -40,7 +40,7 @@ public class PasswordStore {
         }catch(Exception e) {
             System.out.println(Arrays.toString(e.getStackTrace()) );
         }
-        calculateScore(plainPass);
+        calculateScore(this.password);
     }
     public String getPassword(){
          try{
@@ -76,6 +76,6 @@ public class PasswordStore {
     
     @Override
     public String toString() {
-        return "Username : "+username + "/nPassword : " + password + "/nHashkey : " + hashkey + "/nCategory: "+category +"/nScore : " +score;
+        return "Username : "+username + "\nPassword : " + password + "\nHashkey : " + hashkey + "\nCategory: "+getCategory +"\nScore : " +score;
     }
 }
